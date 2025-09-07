@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    form {
+      padding: 2rem 2rem;
+      border: 0;
+      border-radius: 0.5rem;
+      display: flex;
+      font-size: smaller;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      width: 90vw;
+      box-shadow: 0 1.5px 5px gray;
+    }
+
+    .form-grp {
+      display: grid;
+      gap: 0.5rem;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    fieldset {
+      border: 0;
+    }
+
+    input {
+      padding: 0.5rem 1rem;
+      border: 2px solid transparent;
+      border-radius: 0.5rem;
+      background-color: gainsboro;
+    }
+
+    input[type='radio'],
+    input[type='checkbox'] {
+      cursor: pointer;
+    }
+
+    textarea {
+      resize: none;
+      width: 100%;
+      height: 4rem;
+      padding: 0.5rem;
+      border: 2px solid transparent;
+      border-radius: 0.5rem;
+      background-color: gainsboro;
+    }
+
+    button {
+      padding: 0.6rem 2rem;
+      border: 2px solid rgb(140, 139, 139);
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: black;
+      color: white;
+      border: 0;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(-0.2rem);
+      box-shadow: 0 5px 8px gray;
+    }
+
+    .button-group {
+      display: grid;
+      gap: 0.5rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media only screen and (max-width:600px) {
+      .form-grp {
+        grid-template-columns: 100%;
+      }
+    }
+
+    @media only screen and (max-width:380px) {
+      .button-group {
+        grid-template-columns: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+      Task:
+      1. Create an HTML form containing:
+         - A text input for name.
+         - Radio buttons for gender.
+         - Checkboxes for interests.
+         - A textarea for additional comments.
+         - A submit button.
+      2. Style the form and its elements to enhance user experience.
+      3. Include hover and focus effects. (Hover effect for the submit and cancel buttons and focus effect for the text input and textarea)
+    -->
+  <form>
+    <div class="form-grp">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" placeholder="John Doe">
+    </div>
+    <fieldset class="form-grp">
+      <p>Select your gender: </p>
+      <div class="button-group">
+        <div class="">
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+        </div>
+        <div class="">
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="form-grp">
+      <p>Mark Your interests: </p>
+      <div class="button-group">
+        <div class="">
+          <input type="checkbox" id="out" name="out" value="Outdoor games">
+          <label for="out">Outdoor games</label>
+        </div>
+        <div class="">
+          <input type="checkbox" id="in" name="in" value="Indoor games">
+          <label for="in">Indoor games</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="form-grp">
+      <label for="comments">Comment: </label>
+      <textarea id="comments" name="comment" placeholder="Write your comment here..."></textarea>
+    </fieldset>
+    <div class="button-group">
+      <div class="center">
+        <button type="reset"> Cancel</button>
+      </div>
+      <div class="center">
+        <button type="submit"> Submit</button>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>

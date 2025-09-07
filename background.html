@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Background</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 10px;
+    }
+
+    .box-1 {
+      width: 500px;
+      height: 500px;
+      border: 1px solid black;
+      background: url('https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg') top left / cover no-repeat;
+    }
+
+    .box-2 {
+      width: 500px;
+      height: 500px;
+      border: 1px solid black;
+      background: url('https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg') top right / 100px  100px no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+        In the below div
+        -> Add a background image to the div (img URL: https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg)
+        -> The image should cover the whole div
+        -> The image should not repeat
+    -->
+  <div class="box-1"></div>
+
+  <!-- 
+        In the below div
+        -> Add a background image to the div (img URL: https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg)
+        -> The image should be of size 100px x 100px
+        -> The image should be placed at the top right corner of the div
+        -> The image should not repeat
+    -->
+  <div class="box-2"></div>
+</body>
+
+</html>

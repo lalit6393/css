@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadows</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .card {
+        width: 300px;
+        margin: 3rem auto;
+        padding: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        background: #fff;
+        transition: all 0.3s ease;
+        box-shadow: 1rem 1rem 0 0 black, 0 0 5px 1px gray, 1.5rem 1.5rem 5rem 2rem gray;
+      }
+
+      .card:hover{
+        transform: scale(110%);
+        box-shadow: 1.5rem 1.5rem 5rem 2rem gray;
+      }
+
+      .card h2 {
+        margin-bottom: 10px;
+        text-shadow: 3px 3px 2px gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      Task:
+      1. Apply a box-shadow to the card to give it a 3D effect.
+      2. Add a text-shadow to the heading for extra emphasis.
+    -->
+    <div class="card">
+      <img
+        src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg"
+        alt="Sample Image"
+        style="width: 100%; border-radius: 5px 5px 0 0"
+      />
+      <h2>Card Title</h2>
+      <p>This is a sample card with both box-shadow and text-shadow effects.</p>
+    </div>
+  </body>
+</html>
